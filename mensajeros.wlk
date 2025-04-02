@@ -1,7 +1,7 @@
-//
+// ObjI - C2 - TP1
 
 object paqueteDeGeorge {
-  var estaPago = false
+  var estaPago = true
 
   method estaPago(_estaPago) {
     estaPago = _estaPago
@@ -10,23 +10,25 @@ object paqueteDeGeorge {
   method estaPago() {
     return estaPago
   }
+
+
+  method puedeSerLlevadoPor_A_(mensajero, destino) {
+    return self.estaPago() && destino.dejaPasar(mensajero)
+  }
 }
 
-object chuckNorris {
-    const peso = 900
-    const puedeLlamar = true
-    
+object chuckNorris {    
+
     method puedeLlamar() {
-        return puedeLlamar
+        return true
     }
     
     method peso() {
-        return peso
+        return 900
     }
 }
 
 object neo {
-    const peso = 0
     var creditoCelular = 0
     var puedeLlamar = self.tieneCredito()
 
@@ -44,35 +46,60 @@ object neo {
     }
 
     method peso() {
-        return peso
+        return 0
     }
 }
 object lincolnHawk {
     var peso = 0
-    const puedeLlamar = false
+    var vehiculo = bicicleta
 
-
-    
     method puedeLlamar() {
-        return puedeLlamar
+        return false
+    }
+
+    method peso(_peso) {
+      peso = _peso
+    }
+
+    method vehiculo(_vehiculo) {
+      vehiculo = _vehiculo
     }
 
     method peso() {
-        return peso
+        return peso + vehiculo.peso()
     }
+}
+
+object bicicleta {
+  
+  method peso() {
+    return 10
+  }
+}
+
+object camion {
+  var acoplados = 0
+
+  method acoplados(_acoplados) {
+    acoplados = _acoplados
+  }
+
+  method peso() {
+    return 500 + 500*acoplados
+  }
 }
 
 object puenteDeBrooklyn {
 
   method dejaPasar(mensajero) {
-    mensajero.peso() < 1000
+    return mensajero.peso() < 1000
   }
 }
 
 object laMatrix {
 
   method dejaPasar(mensajero) {
-    mensajero.puedeLlamar()
+    return mensajero.puedeLlamar()
   }
 }
 
