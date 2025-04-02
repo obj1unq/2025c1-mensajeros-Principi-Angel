@@ -11,7 +11,6 @@ object paqueteDeGeorge {
     return estaPago
   }
 
-
   method puedeSerLlevadoPor_A_(mensajero, destino) {
     return self.estaPago() && destino.dejaPasar(mensajero)
   }
