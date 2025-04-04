@@ -1,5 +1,4 @@
 // ObjI - C2 - TP1
-
 object paqueteDeGeorge {
   var estaPago = true
 
@@ -11,14 +10,11 @@ object paqueteDeGeorge {
     return estaPago
   }
 
-
   method puedeSerLlevadoPor_A_(mensajero, destino) {
     return self.estaPago() && destino.dejaPasar(mensajero)
   }
 }
-
 object chuckNorris {    
-
     method puedeLlamar() {
         return true
     }
@@ -27,7 +23,6 @@ object chuckNorris {
         return 900
     }
 }
-
 object neo {
     var creditoCelular = 0
     var puedeLlamar = self.tieneCredito()
@@ -69,14 +64,11 @@ object lincolnHawk {
         return peso + vehiculo.peso()
     }
 }
-
 object bicicleta {
-  
   method peso() {
     return 10
   }
 }
-
 object camion {
   var acoplados = 0
 
@@ -88,18 +80,13 @@ object camion {
     return 500 + 500*acoplados
   }
 }
-
 object puenteDeBrooklyn {
-
   method dejaPasar(mensajero) {
     return mensajero.peso() < 1000
   }
 }
-
 object laMatrix {
-
   method dejaPasar(mensajero) {
     return mensajero.puedeLlamar()
   }
 }
-
