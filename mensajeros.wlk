@@ -11,7 +11,6 @@ object paqueteDeGeorge {
     return estaPago
   }
 
-
   method puedeSerLlevadoPor_A_(mensajero, destino) {
     return self.estaPago() && destino.dejaPasar(mensajero)
   }
@@ -29,20 +28,18 @@ object chuckNorris {
 }
 
 object neo {
-    var creditoCelular = 0
-    var puedeLlamar = self.tieneCredito()
+    var tieneCredito = false
 
-    method tieneCredito() {
-        return creditoCelular > 0
+    method tieneCredito(_tieneCredito) {
+        tieneCredito = _tieneCredito
     }
 
-    method cargarCredito(carga) {
-        creditoCelular += carga
-        puedeLlamar = self.tieneCredito()
+    method tieneCredito() {
+        return tieneCredito
     }
     
     method puedeLlamar() {
-        return puedeLlamar
+        return self.tieneCredito()
     }
 
     method peso() {
