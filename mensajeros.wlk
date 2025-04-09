@@ -14,6 +14,7 @@ object paqueteDeGeorge {
     return self.estaPago() && destino.dejaPasar(mensajero)
   }
 }
+
 object chuckNorris {    
     method puedeLlamar() {
         return true
@@ -23,6 +24,7 @@ object chuckNorris {
         return 900
     }
 }
+
 object neo {
     var tieneCredito = false
 
@@ -42,6 +44,7 @@ object neo {
         return 0
     }
 }
+
 object lincolnHawk {
     var peso = 0
     var vehiculo = bicicleta
@@ -62,11 +65,13 @@ object lincolnHawk {
         return peso + vehiculo.peso()
     }
 }
+
 object bicicleta {
   method peso() {
     return 10
   }
 }
+
 object camion {
   var acoplados = 0
 
@@ -84,6 +89,7 @@ object puenteDeBrooklyn {
     return mensajero.peso() < 1000
   }
 }
+
 object laMatrix {
   method dejaPasar(mensajero) {
     return mensajero.puedeLlamar()
