@@ -78,6 +78,7 @@ object camion {
     return 500 + 500*acoplados
   }
 }
+
 object puenteDeBrooklyn {
   method dejaPasar(mensajero) {
     return mensajero.peso() < 1000
